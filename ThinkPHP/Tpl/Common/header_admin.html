@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="<?php echo CSS_PATH;?>/Admin/header.css">
+    <link rel="stylesheet" href="<?php echo CSS_PATH;?>/Admin/main.css">
+    <link rel="stylesheet" href="<?php echo CSS_PATH;?>/common.css">
+    <script type="text/javascript" src="<?php echo JS_PATH;?>/menu.js"></script>
+    <title>CT-space</title>
+</head>
+<body>
+<div class="top">
+    <div class="outgoing" onclick="location='/Admin/Index/login_out'" title="退出"></div>
+</div>
+<div class="header">
+    <ul id="ul" class="menu_level_1">
+        <?php foreach($menu_header as $v){?>
+        <li onclick="<?php echo 'get_menu_son(\''.$v['menuid'].'\',this)';?>"><?php echo $v['name'];?></li>
+        <?php }?>
+    </ul>
+</div>
+<div class="left">
+    <ul id="menu_level_2" class="menu_level_2">
+        <?php foreach($menu_left as $key => $value){?>
+        <div id="father_menu_id_<?php echo $key;?>" style="display: none">
+            <?php foreach($value as $k => $v){?>
+            <li name="father_menu_id_<?php echo $v['father'];?>" class="menu_level_<?php if($key==$v['father']){echo 3;}else{echo 4;}?>"
+                <?php if($key!=$v['father']){?>
+                    style="display: none"
+                <?php }?>
+                <?php if($v['level']==2){?>
+                onclick="<?php echo 'get_menu_son_2(\''.$v['menuid'].'\',this)';?>"
+                <?php }else{?>
+                onclick="<?php echo 'get_menu_son_3(\'/'.$v['m'].'/'.$v['c'].'/'.$v['a'].'\',this)';?>"
+                <?php }?>
+            >
+                <span><?php if($key!=$v['father']){echo '|-';}?><?php echo $v['name'];?></span>
+                <?php if($v['level']==2){?>
+                <div class="plus"></div>
+                <?php }?>
+            </li>
+            <?php }?>
+        </div>
+        <?php }?>
+    </ul>
+</div>

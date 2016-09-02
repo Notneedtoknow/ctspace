@@ -1,0 +1,98 @@
+.top{
+    background-color: #996699;
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    box-shadow: 5px 5px 5px #888888;
+}
+.header{
+    background-color: #9999cc;
+    width: 100%;
+    height: 5%;
+    position: fixed;
+    z-index: 997;
+    top: 5%;
+    left: 15%;
+    box-shadow: 0 4px 4px #888888;
+}
+.left{
+    background-color: #ccccff;
+    width: 15%;
+    height: 100%;
+    position: fixed;
+    z-index: 998;
+    top: 5%;
+    box-shadow: 3px 3px 3px #888888;
+}
+
+.menu_level_1{
+    width: 100%;
+    height: 100%;
+    font-family: "黑体";
+    font-size: 22px;
+    color: ghostwhite;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    line-height: 50px;
+}
+.menu_level_1 li{
+    height: 100%;
+    width: 100px;
+    float: left;
+}
+.menu_level_2{
+    width: 100%;
+    height: 100%;
+    font-family: "黑体";
+    font-size: 18px;
+    color: ghostwhite;
+    top: 60px;
+    margin: 0 auto;
+    padding: 30px 0 0 0;
+    text-align: left;
+    line-height: 30px;
+}
+.menu_level_2 .menu_level_3{
+    background-color: #9999cc;
+    height: 30px;
+    margin: 30px 0 0 0;
+    padding: 0 0 0 30px;
+}
+.menu_level_2 .menu_level_4{
+    background-color: #9999cc;
+    height: 30px;
+    margin: 10px 0 0 0;
+    padding: 0 0 0 50px;
+}
+
+.menu_level_2 .menu_level_3 .plus{
+    background-image: url("/Public/icon/16x16/add.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.40;
+    opacity: 0.40;
+    width: 30px;
+    height: 100%;
+    float: right;
+    margin: 0;
+    border: none;
+}
+
+
+
+
+.outgoing{
+    background-image: url("/Public/icon/32x32/outgoing-2.png");
+    filter: alpha(opacity=40);
+    -moz-opacity: 0.40;
+    opacity: 0.40;
+    width: 32px;
+    height: 32px;
+    float: right;
+    margin: 12px;
+    border: none;
+}

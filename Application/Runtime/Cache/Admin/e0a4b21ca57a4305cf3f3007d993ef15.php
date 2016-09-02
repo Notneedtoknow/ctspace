@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>Hi,<?php echo $info;?>.I'm backup.

@@ -1,0 +1,24 @@
+[ 2016-07-29T11:15:36+08:00 ] 127.0.0.1 /favicon.ico
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+ERR: 无法加载模块:Favicon
+
+[ 2016-07-29T16:25:07+08:00 ] 127.0.0.1 /%7BSTATIC_PATH%7Dcss/header.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+ERR: 无法加载模块:{STATIC_PATH}css
+
+[ 2016-07-29T16:25:13+08:00 ] 127.0.0.1 /%7BSTATIC_PATH%7Dcss/header.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000410s ]
+ERR: 无法加载模块:{STATIC_PATH}css
+
+[ 2016-07-29T16:25:19+08:00 ] 127.0.0.1 /%7BSTATIC_PATH%7Dcss/header.css
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000378s ]
+ERR: 无法加载模块:{STATIC_PATH}css
+
