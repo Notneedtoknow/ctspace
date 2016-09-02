@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?php echo CSS_PATH;?>/common.css">
     <link rel="stylesheet" href="<?php echo CSS_PATH;?>/tableV1.css">
+    <script type="text/javascript" src="<?php echo JS_PATH;?>/jquery-3.0.0/jquery-3.0.0.js"></script>
     <script type="text/javascript" src="<?php echo JS_PATH;?>/menu.js"></script>
-    <script type="text/javascript" src="<?php echo JS_PATH;?>/showdate.js"></script>
+    <script type="text/javascript" src="<?php echo JS_PATH;?>/date/dateV1.js"></script>
 </head>
 <body>
 <div class="main_content_html">
@@ -33,11 +34,11 @@
                 </tr>
                 <tr>
                     <td>广告投放开始时间：</td>
-                    <td><input type="text" id="st" name="info[start_time]" onclick="return Calendar('st');" value=""/></td>
+                    <td><input type="text" class="date" data-default="1472797260" name="info[start_time]" value="" readonly/></td>
                 </tr>
                 <tr>
                     <td>广告投放结束时间：</td>
-                    <td><input type="text" id="et" name="info[end_time]" onclick="return Calendar('et');" value=""/></td>
+                    <td><input type="text" class="date" data-default="1472799999" name="info[start_time]" value="" readonly/></td>
                 </tr>
                 <tr>
                     <td>是否显示：</td>

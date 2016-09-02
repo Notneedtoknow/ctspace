@@ -1,0 +1,24 @@
+.date_select_div{
+    margin: 0 auto;
+    padding: 0;
+    width: 250px;
+    height: 250px;
+    position: fixed;
+    background: white;
+    border: 2px #996699 solid;
+    text-align: center;
+}
+
+.date_select_div ul{
+    width: 250px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.date_select_div ul li{
+    margin: 0 auto;
+    padding: 0;
+    width: 33px;
+    border: 1px #996699 solid;
+    display: inline-block;
+}

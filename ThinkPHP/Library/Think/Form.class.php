@@ -78,6 +78,49 @@ class Form{
     }
 
 
+    /**
+     * 日期时间控件
+     *
+     * @param $name 控件name，id
+     * @param $value 选中值
+     * @param $isdatetime 是否显示时间
+     * @param $loadjs 是否重复加载js，防止页面程序加载不规则导致的控件无法显示
+     * @param $showweek 是否显示周，使用，true | false
+     */
+    public static function date($name, $value = '', $isdatetime = 0, $loadjs = 0, $showweek = 'true', $timesystem = 1, $minDate, $maxDate) {
+
+        if($value == '0000-00-00 00:00:00') $value = '';
+        $id = preg_match("/\[(.*)\]/", $name, $m) ? $m[1] : $name;
+        if($isdatetime) {
+            $size = 21;
+            $format = '%Y-%m-%d %H:%M:%S';
+            if($timesystem){
+                $showsTime = 'true';
+            } else {
+                $showsTime = '12';
+            }
+
+        } else {
+            $size = 10;
+            $format = '%Y-%m-%d';
+            $showsTime = 'false';
+        }
+        $str = '';
+        $showdate = '';
+        if($isdatetime){
+            $showdate = ' HH:mm:ss';
+        }
+        if($maxDate!=''){
+            $maxDate =",maxDate:'#F{\$dp.\$D(\\'".$maxDate."\\')}'";
+        }
+        if($minDate!=''){
+            $minDate =",minDate:'#F{\$dp.\$D(\\'".$minDate."\\')}'";
+        }
+        $str .= '<input type="text"  name="'.$name.'" id="'.$id.'" onfocus="WdatePicker({dateFmt:\'yyyy-MM-dd'.$showdate.'\''.$minDate.$maxDate.'})" value="'.$value.'" size="'.$size.'" class="date" readonly>';
+        return $str;
+    }
+
+
 
 
 

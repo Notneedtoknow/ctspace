@@ -34,7 +34,7 @@
                 <td><?php echo ($value["cname"]); ?></td>
                 <td><?php echo ($value["is_show"]); ?></td>
                 <td>
-                    <button onclick="get_tpl_inside('/Extra/Index/add_poster?action=edit&id=<?php echo ($value["id"]); ?>')">修改</button>
+                    <button onclick="get_tpl_inside('/Extra/Index/add_poster?action=edit&id=<?php echo ($value["id"]); ?>&poster_place_id=<?php echo ($poster_place_id); ?>')">修改</button>
                     <button onclick="get_tpl_inside('/Extra/Index/delete_poster?id=<?php echo ($value["id"]); ?>')">删除</button>
                     <button onclick="get_tpl_inside('/Extra/Index/poster?id=<?php echo ($value["id"]); ?>')">查看广告</button>
                 </td>
