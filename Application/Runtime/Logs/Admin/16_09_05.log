@@ -1,0 +1,534 @@
+[ 2016-09-05T09:01:12+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.1070s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0091s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0007s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0006s ]
+
+[ 2016-09-05T09:01:16+08:00 ] 127.0.0.1 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000582s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0060s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.096417s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.096456s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000142s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000326s ]
+
+[ 2016-09-05T09:01:16+08:00 ] 127.0.0.1 /index.php/Admin/Index/verify_c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000252s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000268s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001233s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001387s ]
+
+[ 2016-09-05T09:01:23+08:00 ] 127.0.0.1 /Admin/Index/ajax_check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000207s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000288s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0161s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0811s ]
+SQL: SELECT * FROM `admin_user` WHERE ( admin_name ='admin' AND trash = '0' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `admin_user` SET `login_time`='1473037283',`login_ip`='127.0.0.1' WHERE ( admin_name = 'admin' ) [ RunTime:0.1038s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000107s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000239s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.070806s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.070925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000813s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000880s ]
+
+[ 2016-09-05T09:01:24+08:00 ] 127.0.0.1 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000438s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000626s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000023s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000056s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.045566s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045611s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000178s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000312s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000337s ]
+
+[ 2016-09-05T09:22:19+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0062s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0001s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000063s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018806s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018852s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000511s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000516s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000544s ]
+
+[ 2016-09-05T09:58:46+08:00 ] 127.0.0.1 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000569s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000915s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000992s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0067s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000033s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000069s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011605s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011659s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000370s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000395s ]
+
+[ 2016-09-05T09:58:47+08:00 ] 127.0.0.1 /index.php/Admin/Index/verify_c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000665s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0094s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000935s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001136s ]
+
+[ 2016-09-05T09:58:53+08:00 ] 127.0.0.1 /Admin/Index/ajax_check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000253s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0071s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0234s ]
+SQL: SELECT * FROM `admin_user` WHERE ( admin_name ='admin' AND trash = '0' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `admin_user` SET `login_time`='1473040733',`login_ip`='127.0.0.1' WHERE ( admin_name = 'admin' ) [ RunTime:0.0679s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000029s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000071s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016025s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016072s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000388s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000416s ]
+
+[ 2016-09-05T09:58:54+08:00 ] 127.0.0.1 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000401s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000510s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000022s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000051s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006853s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006924s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000281s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000505s ]
+
+[ 2016-09-05T10:01:51+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000330s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0074s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+
+[ 2016-09-05T10:01:54+08:00 ] 127.0.0.1 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000559s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000748s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000834s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000045s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005589s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005640s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000504s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000540s ]
+
+[ 2016-09-05T10:01:54+08:00 ] 127.0.0.1 /index.php/Admin/Index/verify_c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000226s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000569s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000640s ]
+
+[ 2016-09-05T10:02:00+08:00 ] 127.0.0.1 /Admin/Index/ajax_check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000464s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0124s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0181s ]
+SQL: SELECT * FROM `admin_user` WHERE ( admin_name ='admin' AND trash = '0' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: UPDATE `admin_user` SET `login_time`='1473040920',`login_ip`='127.0.0.1' WHERE ( admin_name = 'admin' ) [ RunTime:0.0567s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000028s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000061s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004360s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004399s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000231s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000366s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000392s ]
+
+[ 2016-09-05T10:02:01+08:00 ] 127.0.0.1 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000647s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000642s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0091s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000057s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005007s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005059s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000520s ]
+
+[ 2016-09-05T10:16:01+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000237s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.1899s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0009s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0004s ]
+
+[ 2016-09-05T10:16:05+08:00 ] 127.0.0.1 /index.php/Admin/Index/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000490s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0066s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000030s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000059s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008331s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008369s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000268s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000363s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000402s ]
+
+[ 2016-09-05T10:16:05+08:00 ] 127.0.0.1 /index.php/Admin/Index/verify_c.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000315s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0055s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000511s ]
+
+[ 2016-09-05T10:16:15+08:00 ] 127.0.0.1 /Admin/Index/ajax_check_login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000327s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0209s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `admin_user` [ RunTime:0.0267s ]
+SQL: SELECT * FROM `admin_user` WHERE ( admin_name ='admin' AND trash = '0' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `admin_user` SET `login_time`='1473041774',`login_ip`='127.0.0.1' WHERE ( admin_name = 'admin' ) [ RunTime:0.0362s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000027s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000057s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004263s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004310s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000219s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000242s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000437s ]
+
+[ 2016-09-05T10:16:16+08:00 ] 127.0.0.1 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000556s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0093s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000025s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000058s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004137s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004172s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000228s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000360s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000384s ]
+
+[ 2016-09-05T10:17:25+08:00 ] 127.0.0.1 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000214s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000351s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0065s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004980s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005024s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000221s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000246s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000280s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000304s ]
+
+[ 2016-09-05T10:19:35+08:00 ] 127.0.0.1 /Admin/Index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000469s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000718s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000777s ]
+SQL: SHOW COLUMNS FROM `menu` [ RunTime:0.0073s ]
+SQL: SELECT * FROM `menu` WHERE ( level = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 1 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 2 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 3 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 6 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+SQL: SELECT * FROM `menu` WHERE ( father = 7 AND trash = '0' ) ORDER BY sort ASC  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000026s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000059s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004497s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004529s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000372s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000397s ]
+

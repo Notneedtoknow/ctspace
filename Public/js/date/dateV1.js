@@ -2,8 +2,13 @@
  * Created by kangxin on 16-9-2.
  */
 var div = "<div class='date_select_div'></div>";
+var div_head = "<div class='date_select_div_head'></div>"
+var div_select_year = "<div class='date_select_div_head_year'></div>"
+var div_body = "<div class='date_select_div_body'></div>"
+var div_footer = "<div class='date_select_div_footer'></div>"
 var li = "<li class='date_select_li'></li>";
-var weekend_arr = new Array('日','一','二','三','四','五','六');
+var weekend_arr = new Array('Sun','Mon','Tue','Wed','Thu','Fri','Sat');
+var month_arr = new Array('Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec');
 var days_arr = new Array('31','28','31','30','31','30','31','31','30','31','30','31');
 var time;
 var year,month,date,weekend;//年月日周
@@ -15,6 +20,7 @@ $(document).ready(function(){
         var elem = event.target || event.srcElement;
         while (elem) { //循环判断至跟节点，防止点击的是div子元素
             if (elem.className && elem.className=='date_select_div') {
+                open_new_select(event.target.className);
                 return;
             }
             if(elem.className == 'date'){
@@ -31,7 +37,7 @@ $(document).ready(function(){
 
         time = new Date($(this).data('default') * 1000);
         year = time.getFullYear();
-        month = time.getMonth() + 1;
+        month = time.getMonth();
         date = time.getDate();
         weekend = time.getDay();
         if(is_leap_year()){
@@ -39,26 +45,54 @@ $(document).ready(function(){
         }
         get_seven_days();
 
-        $(this).after(div);
+        $(this).after(div);//总体控件
+        var date_select_div = $(".date_select_div");
+        date_select_div.append(div_head);
+        date_select_div.append(div_body);
+        date_select_div.append(div_footer);
+        //年月选择框
+        var date_select_div_head = $(".date_select_div_head");
+        date_select_div_head.append(return_head_str('left',year));
+        date_select_div_head.append(return_head_str('right',month_arr[month]));
+        //日期选择框
         for(var i=0;i<day_data.length;i++){
-            $(".date_select_div").append(append_ul(i));
+            $(".date_select_div_body").append(append_ul(i));
             if(i==0){
-                li_to_ul($(".ul_"+i),weekend_arr);
+                li_to_ul($(".ul_"+i),weekend_arr,'');
+            }else if(i==1){
+                li_to_ul($(".ul_"+i),day_data[i],'head');
+            }else if(i>=4){
+                li_to_ul($(".ul_"+i),day_data[i],'footer');
             }else{
-                li_to_ul($(".ul_"+i),day_data[i]);
+                li_to_ul($(".ul_"+i),day_data[i],'');
             }
         }
 
     });
-
-
 });
+
+function open_new_select(className){
+    if(className=='date_select_div_head_left'){
+        $('.date_select_div_head_left').after(div_select_year);
+        var date_select_div_head_year = $('.date_select_div_head_year');
+        for(var i=0;i<5;i++){
+            var select_year = year + i - 2;
+            date_select_div_head_year.append(
+                "<div class='date_select_div_head_year_"+i+"' style='background-color: #996699;border: 1px white solid;height: 35px;'>"+select_year+"</div>"
+            );
+        }
+    }
+}
+
+function date_manage(year,month,day){
+    remove_div();
+}
 
 function get_seven_days(){
     var min_weekend = date%7;
-    var last_days = days_arr[month - 2];//上个月的天数
-    var now_days = days_arr[month - 1];//本月天数
-    var first_day = last_days - (weekend + 1 - min_weekend) + 1;//日期控件现实的第一天
+    var last_days = days_arr[month-1];//上个月的天数
+    var now_days = days_arr[month];//本月天数
+    var first_day = last_days - (weekend + 1 - min_weekend) + 1;//日期控件显示的第一天
     var i, j, flag = 0;
     for(i=1;;i++){
         day_data[i] = new Array();
@@ -93,15 +127,24 @@ function is_leap_year(){
 
 
 
+//---------head---------
+function return_head_str(align,value){
+    return "<div class='date_select_div_head_" +align + "'>" + value + "</div>"
+}
 
+//---------body---------
 //向div中添加ul
 function append_ul(a){
     return "<ul class='date_select_ul ul_" + a + "'></ul>";
 }
 //向ul中添加li
-function li_to_ul(obj,array){
+function li_to_ul(obj,array,flag){
     for ( var i in array){
-        var li = "<li>" + array[i] + "</li>";
+        if((flag=='head'&&array[i]>20)||(flag=='footer'&&array[i]<10)){
+            var li = "<li class='not_this_month'>" + array[i] + "</li>";
+        }else{
+            var li = "<li>" + array[i] + "</li>";
+        }
         obj.append(li);
     }
 }
@@ -109,6 +152,8 @@ function li_to_ul(obj,array){
 function remove_div(){
     $(".date_select_div").remove();
 }
+//---------footer---------
+
 //加载css样式文件
 function load_css(){
     //获取当前网址，如： http://localhost:8083/uimcardprj/share/meun.jsp
