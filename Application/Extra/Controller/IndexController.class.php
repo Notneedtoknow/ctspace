@@ -2,6 +2,7 @@
 namespace Extra\Controller;
 use Admin;
 class IndexController extends Admin\AbstractCommon {
+    protected $poster_place,$poster,$poster_btn,$is_show,$type;
     public function __construct() {
         parent::__construct();
 
@@ -87,13 +88,19 @@ class IndexController extends Admin\AbstractCommon {
 
     public function add_poster(){
         $action = I('get.action');
+        $start_time = time();
+        $end_time = time()+86400;
         if($action == 'edit'){
             $id = I('get.id');
             $data = $this->poster->where('id = '.$id)->find();
             $default = $data['is_show'];
             $default_type = $data['type'];
+            $start_time = $data['start_time'];
+            $end_time = $data['end_time'];
             unset($data['is_show']);
             unset($data['type']);
+            unset($data['start_time']);
+            unset($data['end_time']);
             $this->assign($data);
         }else{
             $default = 'Y';
@@ -102,15 +109,17 @@ class IndexController extends Admin\AbstractCommon {
         $this->assign('action',$action);
         $this->assign('is_show',$this->form->radio($this->is_show,'is_show',$default,true));
         $this->assign('type',$this->form->radio($this->type,'type',$default_type,true));
+        $this->assign('start_time',$this->form->dateV2($start_time,'info[start_time]',false));
+        $this->assign('end_time',$this->form->dateV2($end_time,'info[end_time]',false));
         $this->display();
     }
 
     public function add_poster_submit(){
         $action = I('post.action');
         $info = I('post.info');
-        if(empty($action)||empty($info)){
-            $this->error('传递参数错误！');
-        }
+//        if(empty($action)||empty($info)){
+//            $this->error('传递参数错误！');
+//        }
         $info['start_time'] = strtotime($info['start_time']);
         $info['end_time'] = strtotime($info['end_time']);
 
@@ -118,6 +127,7 @@ class IndexController extends Admin\AbstractCommon {
         $info['update_name'] = $this->user_info['name'];
         $info['update_time'] = time();
 
+        var_dump($info);die;
         if($action == 'edit'){
             $id = I('post.id');
             if(empty($id)){

@@ -77,47 +77,36 @@ class Form{
         return $data;
     }
 
-
     /**
-     * 日期时间控件
-     *
-     * @param $name 控件name，id
-     * @param $value 选中值
-     * @param $isdatetime 是否显示时间
-     * @param $loadjs 是否重复加载js，防止页面程序加载不规则导致的控件无法显示
-     * @param $showweek 是否显示周，使用，true | false
+     * 日期控件V2版  调用dateV2.js
+     * @param $time '默认时间 时间戳'
+     * @param $name '表单提交name'
+     * @param bool $is_second '是否精确到秒'
+     * @return string
      */
-    public static function date($name, $value = '', $isdatetime = 0, $loadjs = 0, $showweek = 'true', $timesystem = 1, $minDate, $maxDate) {
-
-        if($value == '0000-00-00 00:00:00') $value = '';
-        $id = preg_match("/\[(.*)\]/", $name, $m) ? $m[1] : $name;
-        if($isdatetime) {
-            $size = 21;
-            $format = '%Y-%m-%d %H:%M:%S';
-            if($timesystem){
-                $showsTime = 'true';
-            } else {
-                $showsTime = '12';
-            }
-
-        } else {
-            $size = 10;
-            $format = '%Y-%m-%d';
-            $showsTime = 'false';
+    public function dateV2($time,$name,$is_second=false){
+        $time_date = date('Y:m:d:H:i:s',$time);
+        $time_date = explode(':',$time_date);
+        $time = date('Y-m-d H:i:s',$time);
+        $data_str = '<div class="date_select">';
+        $data_str .= '<input type="text" class="info_date" name="'.$name.'" value="'.$time.'" hidden>';
+        $data_str .= '<ul class="date">';
+        $data_str .= '<li class="data date_year">'.intval($time_date[0]).'</li>';
+        $data_str .= '<li class="middle">-</li>';
+        $data_str .= '<li class="data date_month">'.intval($time_date[1]).'</li>';
+        $data_str .= '<li class="middle">-</li>';
+        $data_str .= '<li class="data date_day">'.intval($time_date[2]).'</li>';
+        if($is_second){
+            $data_str .= '<li class="middle"></li>';
+            $data_str .= '<li class="data date_hour">'.intval($time_date[3]).'</li>';
+            $data_str .= '<li class="middle">:</li>';
+            $data_str .= '<li class="data date_minute">'.intval($time_date[4]).'</li>';
+            $data_str .= '<li class="middle">:</li>';
+            $data_str .= '<li class="data date_second">'.intval($time_date[5]).'</li>';
         }
-        $str = '';
-        $showdate = '';
-        if($isdatetime){
-            $showdate = ' HH:mm:ss';
-        }
-        if($maxDate!=''){
-            $maxDate =",maxDate:'#F{\$dp.\$D(\\'".$maxDate."\\')}'";
-        }
-        if($minDate!=''){
-            $minDate =",minDate:'#F{\$dp.\$D(\\'".$minDate."\\')}'";
-        }
-        $str .= '<input type="text"  name="'.$name.'" id="'.$id.'" onfocus="WdatePicker({dateFmt:\'yyyy-MM-dd'.$showdate.'\''.$minDate.$maxDate.'})" value="'.$value.'" size="'.$size.'" class="date" readonly>';
-        return $str;
+        $data_str .= '</ul>';
+        $data_str .= '</div>';
+        return $data_str;
     }
 
 

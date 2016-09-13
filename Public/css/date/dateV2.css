@@ -1,9 +1,16 @@
+.date_select {
+    height: 30px;
+    position: relative;
+}
 .date {
+    height: 30px;
     display: inline;
     text-align: center;
     font-family: "黑体";
     color: ghostwhite;
-    position: relative;
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;
 }
 .date li {
     float: left;
@@ -24,7 +31,7 @@
     padding: 0;
     width: 76px;
     position: absolute;
-    top: 29px;
+    top: 30px;
     background: white;
     border: 2px #996699 solid;
     text-align: center;
